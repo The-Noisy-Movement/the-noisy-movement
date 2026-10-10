@@ -71,16 +71,11 @@ body::before {
     text-align: justify;
     margin-top: 1px;
     margin-left: 20px;
-    line-height: 180%;
+    line-height: 200%;
 }
 
 #lined-page a:link{
   color: rgb(185, 0, 145);
-  background-color: transparent;
-}
-
-#page a:visited {
-  color: pink;
   background-color: transparent;
 }
 
@@ -95,32 +90,32 @@ body::before {
 
 #flowers-cherryblossoms-washi-tape {
     position: absolute;
-    width: 15%;
-    left: 3%;
+    width: 12%;
+    left: 5%;
     top: 5%;
     transform: rotate(-30deg);
 }
 
 #flowers-pink-light {
     position: absolute;
-    width: 15%;
-    right: 33%;
+    width: 12%;
+    right: 35%;
     top: 5%;
     transform: rotate(30deg);
 }
 
 #flowers-pink {
     position: absolute;
-    width: 15%;
-    right: 33%;
+    width: 12%;
+    right: 35%;
     top: 65%;
     transform: rotate(-30deg);
 }
 
 #flowers-red {
     position: absolute;
-    width: 15%;
-    left: 3%;
+    width: 12%;
+    left: 5%;
     top: 65%;
     transform: rotate(30deg);
 }
@@ -162,15 +157,15 @@ body::before {
     font-family: 'Typewriter_Normal';
     position: absolute;
     width: 100%;
-    top: 22%;
+    top: 20%;
+    right: 2%;
     text-align: center;
 }
 
-#sticky-note a:link{
+#sticky-note a {
   color: rgb(185, 0, 145);
   background-color: transparent;
 }
-
 
 /* ------------------------------------------------------------ */
 /* Mobile view */
@@ -185,6 +180,7 @@ body::before {
     #lined-page {
         width: 75%;
         right: 10%;
+        top: -10px;
         margin: 40px auto;
         padding: 12px;
     }
@@ -192,21 +188,23 @@ body::before {
     #lined-page p {
         font-size: 10px;
         margin-left: 3%;
-        line-height: 1.4;
+        line-height: 156%;
+        font-size: 6px;
     }
 
     #TNM-logo {
-        width: 45%;
+        width: 38%;
     }
 
     #flowers-cherryblossoms-washi-tape {
         width: 12%;
-        top: 6%;
+        top: 8%;
+        left: 2%;
 
     }
     #flowers-pink-light {
         width: 12%;
-        top: 6%;
+        top: 8%;
         right: 20%;
     }
 
@@ -219,6 +217,7 @@ body::before {
     #flowers-red {
         width: 12%;
         top: 45%;
+        left: 2%;
     }
 
     #sticky-note {
@@ -234,6 +233,7 @@ body::before {
         padding: 0 2px;
         font-size: 7px;
         line-height: 1.2;
+        font-size: 4px;
         text-align: center;
     }
 }
