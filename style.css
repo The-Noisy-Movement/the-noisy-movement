@@ -71,7 +71,7 @@ body::before {
     text-align: justify;
     margin-top: 1px;
     margin-left: 20px;
-    line-height: 156%;
+    line-height: 180%;
 }
 
 #lined-page a:link{
@@ -113,7 +113,7 @@ body::before {
     position: absolute;
     width: 15%;
     right: 33%;
-    top: 62%;
+    top: 65%;
     transform: rotate(-30deg);
 }
 
@@ -121,7 +121,7 @@ body::before {
     position: absolute;
     width: 15%;
     left: 3%;
-    top: 62%;
+    top: 65%;
     transform: rotate(30deg);
 }
 
@@ -162,7 +162,7 @@ body::before {
     font-family: 'Typewriter_Normal';
     position: absolute;
     width: 100%;
-    top: 20%;
+    top: 22%;
     text-align: center;
 }
 
