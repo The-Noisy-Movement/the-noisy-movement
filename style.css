@@ -1,4 +1,15 @@
-/* Font is a pixel-like cursive */
+/* Makes sizing more predictable on all devices */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------------------------------------------------------ */
+/* Font is a pixel-like cursive or typewriter */
 
 @font-face {
     font-family: 'Typewriter_Normal';
@@ -15,32 +26,214 @@
 }
 
 /* ------------------------------------------------------------ */
+/* Everything on the lined page */
 
 body {
     background-image: url('background/salmon-background.png');
     background-repeat: repeat; 
 
     font-family: 'Typewriter_Normal';
-    font-size: 18px;
+    font-size: 15px;
     color: #33152d;
-    margin: 1px;
+    margin: 4px;
     text-align: justify;
 }
 
-#page {
+/* Pride garland */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+
+    background-image: url('images/pride-trans.png');
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-size: auto 20px;
+}
+
+#lined-page {
+    background-image: url('images/paper.jpg');
+    background-size: cover;
+
     position: relative;
-
-    width: 70%;
+    right: 15%;
+    width: 50%;
     max-width: 900px;
-
-    margin: 30px auto;
+    margin: 60px auto;
     padding: 20px;
-
-    background-color: #ffffff;
-
     text-align: center;
 }
 
-#page p{
+#lined-page p{
     text-align: justify;
+    margin-top: 1px;
+    margin-left: 20px;
+    line-height: 156%;
+}
+
+#lined-page a:link{
+  color: rgb(185, 0, 145);
+  background-color: transparent;
+}
+
+#page a:visited {
+  color: pink;
+  background-color: transparent;
+}
+
+#TNM-logo {
+    position: relative;
+    width: 40%;
+    top: 10%;
+}
+
+/* ------------------------------------------------------------ */
+/* Washi-tape stuff for lined page*/
+
+#flowers-cherryblossoms-washi-tape {
+    position: absolute;
+    width: 15%;
+    left: 3%;
+    top: 5%;
+    transform: rotate(-30deg);
+}
+
+#flowers-pink-light {
+    position: absolute;
+    width: 15%;
+    right: 33%;
+    top: 5%;
+    transform: rotate(30deg);
+}
+
+#flowers-pink {
+    position: absolute;
+    width: 15%;
+    right: 33%;
+    top: 62%;
+    transform: rotate(-30deg);
+}
+
+#flowers-red {
+    position: absolute;
+    width: 15%;
+    left: 3%;
+    top: 62%;
+    transform: rotate(30deg);
+}
+
+/* ------------------------------------------------------------ */
+/* Crumpled page things */
+
+/* 
+#crumpled-page {
+    background-image: url('images/crumpled-paper.png');
+    background-size: cover;
+
+    position: relative;
+
+    width: 50%;
+
+    margin: 60px auto;
+    padding: 20px;
+}
+*/ 
+
+/* ------------------------------------------------------------ */
+/* Sticky note things */
+
+#sticky-note {
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    width: 30%;
+}
+
+#pink-sticky-note {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#sticky-note p {
+    font-family: 'Typewriter_Normal';
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    text-align: center;
+}
+
+#sticky-note a:link{
+  color: rgb(185, 0, 145);
+  background-color: transparent;
+}
+
+
+/* ------------------------------------------------------------ */
+/* Mobile view */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #lined-page {
+        width: 75%;
+        right: 10%;
+        margin: 40px auto;
+        padding: 12px;
+    }
+
+    #lined-page p {
+        font-size: 10px;
+        margin-left: 3%;
+        line-height: 1.4;
+    }
+
+    #TNM-logo {
+        width: 45%;
+    }
+
+    #flowers-cherryblossoms-washi-tape {
+        width: 12%;
+        top: 6%;
+
+    }
+    #flowers-pink-light {
+        width: 12%;
+        top: 6%;
+        right: 20%;
+    }
+
+    #flowers-pink {
+        width: 12%;
+        top: 45%;
+        right: 20%;
+    }
+
+    #flowers-red {
+        width: 12%;
+        top: 45%;
+    }
+
+    #sticky-note {
+        width: 23%;
+        right: 2%;
+        top: 15%;
+    }
+
+    #sticky-note p {
+        width: 100%;
+        top: 15%;
+        right: 3%;
+        padding: 0 2px;
+        font-size: 7px;
+        line-height: 1.2;
+        text-align: center;
+    }
 }
