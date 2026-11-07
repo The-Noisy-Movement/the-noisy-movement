@@ -54,24 +54,33 @@ body::before {
     background-size: auto 20px;
 }
 
+/* ------------------------------------------------------------ */
+/* Lined page things */
+
 #lined-page {
+    --line: 4.116cqw;
+
     background-image: url('images/paper.jpg');
-    background-size: cover;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
 
     position: relative;
     right: 15%;
     width: 50%;
     max-width: 900px;
     margin: 60px auto;
-    padding: 20px;
+    padding: 0;
+    display: flow-root;
     text-align: center;
+    container-type: inline-size;
 }
 
 #lined-page p{
     text-align: justify;
-    margin-top: 1px;
-    margin-left: 20px;
-    line-height: 200%;
+    margin: calc(var(--line)*0.13) 6cqw calc(var(--line)*1.5);
+    line-height: var(--line);
+    font-size: calc(var(--line)*0.6)
 }
 
 #lined-page a:link{
@@ -80,13 +89,15 @@ body::before {
 }
 
 #TNM-logo {
-    position: relative;
-    width: 40%;
-    top: 10%;
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: calc(var(--line)*4);
+    margin: 1cqw auto 0;
 }
 
 /* ------------------------------------------------------------ */
-/* Washi-tape stuff for lined page*/
+/* Washi-tape stuff for lined page */
 
 #flowers-cherryblossoms-washi-tape {
     position: absolute;
@@ -143,8 +154,9 @@ body::before {
 #sticky-note {
     position: absolute;
     right: 5%;
-    top: 15%;
+    top: 5%;
     width: 30%;
+    container-type: inline-size;
 }
 
 #pink-sticky-note {
@@ -156,10 +168,16 @@ body::before {
 #sticky-note p {
     font-family: 'Typewriter_Normal';
     position: absolute;
-    width: 100%;
+    width: auto;
     top: 20%;
-    right: 2%;
+    right: 8%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+    font-size: 4.5cqw;
+    line-height: 1.4;
 }
 
 #sticky-note a {
@@ -182,35 +200,20 @@ body::before {
         right: 10%;
         top: -10px;
         margin: 40px auto;
-        padding: 12px;
-    }
-
-    #lined-page p {
-        font-size: 10px;
-        margin-left: 3%;
-        line-height: 190%;
-        font-size: 6px;
-    }
-
-    #TNM-logo {
-        width: 38%;
     }
 
     #sticky-note {
         width: 23%;
-        right: 2%;
-        top: 15%;
+        right: 0%;
+        top: 10%;
     }
 
     #sticky-note p {
-        width: 100%;
-        top: 15%;
-        right: 3%;
-        padding: 0 2px;
-        font-size: 7px;
+        top: 4%;
+        bottom: 6%;
+        left: 6%;
+        right: 6%;
+        font-size: 5cqw;
         line-height: 1.2;
-        font-size: 4px;
-        text-align: center;
-        line-height: 150%;
     }
 }
